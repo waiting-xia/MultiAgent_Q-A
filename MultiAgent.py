@@ -13,9 +13,9 @@ from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
 from langgraph.graph import StateGraph, END, START
 from langgraph.checkpoint.memory import MemorySaver
-# 替换为这行
-from langchain.agents import create_agent
 
+from langchain.agents import create_agent
+from langchain_community.llms import Ollama
 # ==========================================
 # 1. 资源初始化与自定义工具 (RAG & MCP)
 # ==========================================
@@ -65,6 +65,11 @@ tools = [rag_search_tool, mcp_client_tool]
 
 # 初始化 LLM
 # llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+# llm = Ollama(
+#     model="qwen3.5-flas",  # 本地的模型名字
+#     temperature=0.7,   # 随机性
+#     base_url="http://localhost:11434"  # 默认地址
+# )
 llm = ChatOpenAI(model="qwen3.5-flash", 
                temperature=0.7,  
                base_url="https://dashscope.aliyuncs.com/compatible-mode/v1", 
