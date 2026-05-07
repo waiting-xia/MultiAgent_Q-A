@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic
+chromadb
+langchain-core
+langchain-openai
+langchain-text-splitters
+langgraph
+rank_bm25
+jieba
+requests
+streamlit

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -c \"from langgraph.prebuilt import create_react_agent; print\\('create_react_agent available'\\)\" 2>&1)"
+    ]
+  }
+}
